@@ -10,6 +10,7 @@
         </div>
         <ul>
             <li onclick="showTab('home', this)">Home</li>
+            <li onclick="showTab('youtube', this)">YouTube</li>
             <li onclick="showTab('tab2', this)">Knight's Dilemma</li>
             <li onclick="toggleSubtabs('discordBot', this)">Discord Bot <span id="openBracket">{</span></li>
             <ul id="discordBotSubtabs" class="subtabs">
@@ -26,7 +27,15 @@
             <div id="home" class="tab active">
                 Hi, I'm currently a sophmore working on my Bachelor's in Computer Science. <br><br> I make a variety of different things - check out the sidebar to see some of my other work!
             </div>
-            <div id="tab2" class="tab">Watch this space for updates on my upcoming Steam game Knights Dilemma!<br><br>A text-based choose your own adventure game with simple but cheerful pixel graphics!</div>
+            <div id="youtube" class="tab">
+                <h2>My YouTube Channel</h2>
+                <p>Check out my completed series playing Italy in Hearts of Iron 4:</p>
+                <div class="video-container">
+                    <iframe src="https://www.youtube.com/embed/videoseries?list=PLLcu8CpqZYiWeuMGmcspx1qltY_zCsW_O&autoplay=1" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                </div>
+            </div>
+            <div id="tab2" class="tab">Watch this space for updates on my upcoming Steam game Knights Dilemma!<br><br>A text-based choose your own adventure game with simple but cheerful pixel graphics!<br><br><iframe src="https://store.steampowered.com/widget/394360/" frameborder="0" width="646" height="190"></iframe>
+            </div>
             <div id="discordBot" class="tab">Information about my Discord bot will go here.</div>
             <div id="controlPanel" class="tab">Control Panel content goes here.</div>
             <div id="documentation" class="tab">Documentation content goes here.</div>
