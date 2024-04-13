@@ -5,6 +5,9 @@
 </head>
 <body>
     <div id="sidebar">
+        <div id="toggleButton" onclick="toggleSidebar()">
+            <div id="toggleIndicator"></div>
+        </div>
         <ul>
             <li onclick="showTab('home', this)">Home</li>
             <li onclick="showTab('tab2', this)">Knight's Dilemma</li>
@@ -16,16 +19,18 @@
             <li id="closeBracket" class="subtabs">}</li>
         </ul>
     </div>
-    <div id="content">
-        <div id="header">Zacaryn.net</div>
-        <div id="separator"></div>
-        <div id="home" class="tab active">
-            Hi, I'm currently a sophmore working on my Bachelor's in Computer Science. <br><br> I make a variety of different things - check out the sidebar to see some of my other work!
+    <div id="siteContent">
+        <div id="content">
+            <div id="header">Zacaryn.net</div>
+            <div id="separator"></div>
+            <div id="home" class="tab active">
+                Hi, I'm currently a sophmore working on my Bachelor's in Computer Science. <br><br> I make a variety of different things - check out the sidebar to see some of my other work!
+            </div>
+            <div id="tab2" class="tab">Watch this space for updates on my upcoming Steam game Knights Dilemma!<br><br>A text-based choose your own adventure game with simple but cheerful pixel graphics!</div>
+            <div id="discordBot" class="tab">Information about my Discord bot will go here.</div>
+            <div id="controlPanel" class="tab">Control Panel content goes here.</div>
+            <div id="documentation" class="tab">Documentation content goes here.</div>
         </div>
-        <div id="tab2" class="tab">Watch this space for updates on my upcoming Steam game Knights Dilemma!<br><br>A text-based choose your own adventure game with simple but cheerful pixel graphics!</div>
-        <div id="discordBot" class="tab">Information about my Discord bot will go here.</div>
-        <div id="controlPanel" class="tab">Control Panel content goes here.</div>
-        <div id="documentation" class="tab">Documentation content goes here.</div>
     </div>
     <script src="script.js"></script>
 </body>

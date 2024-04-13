@@ -33,6 +33,23 @@ function toggleSubtabs(parentTabId, element) {
     element.classList.add('active');
 }
 
+function toggleSidebar() {
+    var sidebar = document.getElementById('sidebar');
+    var button = document.getElementById('toggleButton');
+    var content = document.getElementById('siteContent');
+    var indicator = document.getElementById('toggleIndicator');
+    if (sidebar.style.left === '-190px' || sidebar.style.left === '') {
+        sidebar.style.left = '0px';
+        button.style.right = '0px'; // Adjust this value
+        content.style.marginLeft = '-40px'; // Adjust this value
+    } else {
+        sidebar.style.left = '-190px'; // Adjust this value to -180px
+        button.style.right = '0px'; // Adjust this value to 0
+        indicator.style.display = 'block'; // Show the indicator
+        content.style.marginLeft = '-230px'; // Adjust this value
+    }
+}
+
 window.onload = function() {
     var subtabs = document.getElementsByClassName('subtabs');
     for (var i = 0; i < subtabs.length; i++) {
@@ -43,4 +60,11 @@ window.onload = function() {
 
     var openBracket = document.getElementById('openBracket');
     openBracket.innerHTML = '{ }'; // Set the open bracket to '{ }' on load
+
+    var toggleButton = document.getElementById('toggleButton');
+    toggleButton.style.display = 'block'; // Make sure the button is not hidden
+    toggleButton.style.right = '0px'; // Position the button on the screen
+
+    var sidebar = document.getElementById('sidebar');
+    sidebar.style.left = '0px'; // Open the sidebar
 }

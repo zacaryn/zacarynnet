@@ -5,15 +5,26 @@ body {
     background-color: #f0f0f0;
 }
 
+#siteContent {
+    margin-left: -40px; /* should match the width of the sidebar */
+    transition: margin-left 0.5s;
+    border-left: 1px solid #ccc; /* Add a border to the left side */
+}
 #sidebar {
     width: 200px;
     height: 100vh;
     position: fixed;
-    left: 0;
+    left: -180px; /* set to closed state initially */
     top: 0;
     background-color: #333;
     color: #fff;
     padding: 20px;
+    overflow: hidden;
+    transition: left 0.5s;
+    box-sizing: border-box; /* include padding in width */
+}
+#sidebar.closed {
+    left: -200px; /* should match the width of the sidebar */
 }
 
 #sidebar ul {
@@ -88,4 +99,25 @@ body {
     color: #f0f0f0; /* Change the color of the brackets */
     padding-right: 10px; /* Add space to the right of the open bracket */
     padding-left: 10px; /* Add space to the left of the close bracket */
+}
+#toggleButton {
+    position: absolute;
+    right: 0px; /* Adjust as needed */
+    top: 0;
+    width: 10px; /* Adjust as needed */
+    height: 100%;
+    background-color: rgb(107, 208, 255); /* Adjust as needed */
+    cursor: pointer;
+    box-sizing: border-box; /* include padding in width */
+}
+
+#toggleIndicator {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 2px;
+    height: 20px;
+    background: #fff;
+    transform: translate(-50%, -50%);
+    box-shadow: 0 -6px 0 #fff, 0 6px 0 #fff;
 }
