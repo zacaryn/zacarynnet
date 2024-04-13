@@ -1,5 +1,5 @@
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Fira Code', monospace;
     margin: 0;
     padding: 0;
     background-color: #f0f0f0;
@@ -10,6 +10,7 @@ body {
     transition: margin-left 0.5s;
     border-left: 1px solid #ccc; /* Add a border to the left side */
 }
+
 #sidebar {
     width: 200px;
     height: 100vh;
@@ -23,6 +24,7 @@ body {
     transition: left 0.5s;
     box-sizing: border-box; /* include padding in width */
 }
+
 #sidebar.closed {
     left: -200px; /* should match the width of the sidebar */
 }
@@ -30,6 +32,11 @@ body {
 #sidebar ul {
     list-style-type: none;
     padding: 0;
+}
+
+#sidebar li {
+    font-weight: 600;
+    font-family: 'Fira Code', monospace;
 }
 
 #sidebar ul li {
@@ -78,7 +85,9 @@ body {
     padding-left: 20px; /* Add padding to the left */
     padding-top: 10px;
     transition: transform 1s ease, color 0.3s ease; /* Combine the transitions */
+    text-decoration: underline;
 }
+
 #header:hover {
     transform: rotate(0deg); /* Straighten the text when hovered */
     color: rgb(107, 208, 255); /* Change the color of the logo to blue when it's hovered over */
@@ -90,10 +99,13 @@ body {
     background-color: #ccc;
     margin-bottom: 20px;
 }
+
+
 .subtabs {
     display: none;
     margin-left: 20px;
 }
+
 #openBracket, #closeBracket {
     font-size: 1.2em; /* Increase the size of the brackets */
     color: #f0f0f0; /* Change the color of the brackets */
@@ -133,6 +145,55 @@ body {
     position: absolute;
     top: 0;
     left: 0;
-    width: 70%;
-    height: 70%;
+    width: 60%;
+    height: 60%;
+}
+.social-icons a {
+    margin: 0 10px;
+    text-decoration: none;
+    color: inherit;
+}
+
+.social-icons i {
+    font-size: 50px; /* Adjust as needed */
+}
+
+.social-icons a:hover {
+    color: #0000FF; /* Replace with the blue color of your site */
+}
+
+@keyframes twitch {
+    0% { transform: translate(0, 0) rotate(0); }
+    20% { transform: translate(-5px, 5px) rotate(-5deg); }
+    40% { transform: translate(-5px, -5px) rotate(5deg); }
+    60% { transform: translate(5px, 5px) rotate(-5deg); }
+    80% { transform: translate(5px, -5px) rotate(5deg); }
+    100% { transform: translate(0, 0) rotate(0); }
+}
+.social-icons a:hover i {
+    animation: twitch 0.5s infinite;
+}
+
+.social-icons .fa-youtube {
+    color: #FF0000; /* YouTube color */
+}
+
+.social-icons .fa-github {
+    color: #181717; /* GitHub color */
+}
+
+.social-icons .fa-itch-io {
+    color: #FA5B5B; /* Itch.io color */
+}
+
+.social-icons .fa-coffee {
+    color: #3E2723; /* Ko-fi color */
+}
+
+.social-icons .fa-twitter {
+    color: #1DA1F2; /* Twitter color */
+}
+
+.social-icons .fa-discord {
+    color: #7289DA; /* Discord color */
 }
