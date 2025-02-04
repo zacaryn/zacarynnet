@@ -198,6 +198,10 @@ body {
     color: #7289DA; /* Discord color */
 }
 
+.social-icons .fa-linkedin {
+    color: #0077B5; /* LinkedIn color */
+}
+
 footer.social-icons {
     position: fixed;
     right: 20px;
